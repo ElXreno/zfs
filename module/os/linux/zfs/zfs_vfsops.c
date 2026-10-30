@@ -1477,8 +1477,6 @@ zfs_domount(struct super_block *sb, const char *osname,
 	if (error)
 		goto out;
 
-	sb->s_bdi->ra_pages = 0;
-
 	/* Set callback operations for the file system. */
 	sb->s_op = &zpl_super_operations;
 	sb->s_xattr = zpl_xattr_handlers;
